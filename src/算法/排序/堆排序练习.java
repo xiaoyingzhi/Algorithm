@@ -1,15 +1,15 @@
-package 算法.练习;
+package 算法.排序;
 
 /**
  * @author wh
- * @create 2018-10-02 11:56
+ * @create 2018-10-16 16:42
  **/
-public class 堆排序 {
+public class 堆排序练习 {
     public static void heapSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
         }
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             heapInsert(arr, i);
         }
         int heapSize = arr.length;
@@ -30,8 +30,7 @@ public class 堆排序 {
     public static void heapify(int[] arr, int index, int heapSize) {
         int left = index * 2 + 1;
         while (left < heapSize) {
-            int largest = left + 1 < heapSize && arr[left + 1] > arr[left] ?
-                    left + 1 : left;
+            int largest = (left + 1) < heapSize && arr[left + 1] > arr[left] ? left + 1 : left;
             largest = arr[largest] > arr[index] ? largest : index;
             if (largest == index) {
                 break;
@@ -43,8 +42,8 @@ public class 堆排序 {
     }
 
     public static void swap(int[] arr, int i, int j) {
-        int tmp = arr[i];
+        int temp = arr[i];
         arr[i] = arr[j];
-        arr[j] = tmp;
+        arr[j] = temp;
     }
 }

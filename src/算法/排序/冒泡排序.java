@@ -1,4 +1,4 @@
-package 算法.练习;
+package 算法.排序;
 
 /**
  * @author wh
