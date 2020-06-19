@@ -1,4 +1,4 @@
-package 算法.排序;
+package 算法.二叉树;
 
 import 算法.二叉树.递归遍历和非递归遍历二叉树.Node;
 
